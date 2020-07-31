@@ -1,0 +1,27 @@
+apiVersion: v1
+entries:
+  minio:
+  - apiVersion: v1
+    appVersion: master
+    created: "2020-07-31T22:21:04.185391124-07:00"
+    description: MinIO is a high performance data infrastructure for machine learning,
+      analytics and application data workloads.
+    digest: 866c71c9e95147eef400cdf538400b35611d0bdbc895c60bf1d4df8ce7eef69a
+    home: https://min.io
+    icon: https://min.io/resources/img/logo/MINIO_wordmark.png
+    keywords:
+    - storage
+    - object-storage
+    - S3
+    maintainers:
+    - email: dev@minio.io
+      name: Minio
+    - email: hello@acale.ph
+      name: Acaleph
+    name: minio
+    sources:
+    - https://github.com/minio/minio
+    urls:
+    - https://minio.github.io/charts/minio-5.0.32.tgz
+    version: 5.0.32
+generated: "2020-07-31T22:21:04.183917341-07:00"
