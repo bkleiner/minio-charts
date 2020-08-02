@@ -57,7 +57,7 @@ Return the appropriate apiVersion for deployment.
 Return the appropriate apiVersion for statefulset.
 */}}
 {{- define "minio.statefulset.apiVersion" -}}
-{{- if .Capabilities.APIVersions.Has "apps/v1beta2" -}}
+{{- if semverCompare "<1.17-0" .Capabilities.KubeVersion.GitVersion -}}
 {{- print "apps/v1beta2" -}}
 {{- else -}}
 {{- print "apps/v1" -}}
@@ -71,7 +71,7 @@ Return the appropriate apiVersion for ingress.
 {{- if semverCompare "<1.14-0" .Capabilities.KubeVersion.GitVersion -}}
 {{- print "extensions/v1beta1" -}}
 {{- else -}}
-{{- print "networking.k8s.io/v1beta1" -}}
+{{- print "networking.k8s.io/v1" -}}
 {{- end -}}
 {{- end -}}
 
@@ -111,11 +111,11 @@ imagePullSecrets:
   - name: {{ . }}
 {{- end }}
 {{- else if .Values.imagePullSecrets }}
-imagePullSecrets: 
+imagePullSecrets:
     {{ toYaml .Values.imagePullSecrets }}
 {{- end -}}
 {{- else if .Values.imagePullSecrets }}
-imagePullSecrets: 
+imagePullSecrets:
     {{ toYaml .Values.imagePullSecrets }}
 {{- end -}}
 {{- end -}}

@@ -22,7 +22,7 @@ Prerequisites
 Configure MinIO Helm repo
 --------------------
 ```bash
-$ helm repo add minio https://minio.github.io/charts
+$ helm repo add minio https://helm.min.io/
 ```
 
 Installing the Chart
