@@ -31,7 +31,7 @@ Installing the Chart
 Install this chart using:
 
 ```bash
-$ helm install --namespace minio minio/minio
+$ helm install --namespace minio --generate-name minio/minio
 ```
 
 The command deploys MinIO on the Kubernetes cluster in the default configuration. The [configuration](#configuration) section lists the parameters that can be configured during installation.
@@ -41,7 +41,7 @@ The command deploys MinIO on the Kubernetes cluster in the default configuration
 An instance of a chart running in a Kubernetes cluster is called a release. Each release is identified by a unique name within the cluster. Helm automatically assigns a unique release name after installing the chart. You can also set your preferred name by:
 
 ```bash
-$ helm install --name my-release minio/minio
+$ helm install my-release minio/minio
 ```
 
 ### Access and Secret keys
@@ -50,6 +50,7 @@ By default a pre-generated access and secret key will be used. To override the d
 
 ```bash
 $ helm install --set accessKey=myaccesskey,secretKey=mysecretkey \
+    --generate-name \
     minio/minio
 ```
 
