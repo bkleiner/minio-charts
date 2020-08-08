@@ -3,7 +3,29 @@ entries:
   minio:
   - apiVersion: v1
     appVersion: master
-    created: "2020-08-02T17:09:15.228997712-07:00"
+    created: "2020-08-08T13:00:16.749080941-07:00"
+    description: High Performance, Kubernetes Native Object Storage
+    digest: ea0a022b88bc91c1c506bd328b2e170287a09903b7302019e9e771c43cbe8937
+    home: https://min.io
+    icon: https://min.io/resources/img/logo/MINIO_wordmark.png
+    keywords:
+    - storage
+    - object-storage
+    - S3
+    maintainers:
+    - email: dev@minio.io
+      name: Minio
+    - email: hello@acale.ph
+      name: Acaleph
+    name: minio
+    sources:
+    - https://github.com/minio/minio
+    urls:
+    - https://helm.min.io/minio-6.0.0.tgz
+    version: 6.0.0
+  - apiVersion: v1
+    appVersion: master
+    created: "2020-08-08T13:00:16.747808177-07:00"
     description: MinIO is a high performance data infrastructure for machine learning,
       analytics and application data workloads.
     digest: 866c71c9e95147eef400cdf538400b35611d0bdbc895c60bf1d4df8ce7eef69a
@@ -24,4 +46,4 @@ entries:
     urls:
     - https://helm.min.io/minio-5.0.32.tgz
     version: 5.0.32
-generated: "2020-08-02T17:09:15.227062639-07:00"
+generated: "2020-08-08T13:00:16.7454078-07:00"
