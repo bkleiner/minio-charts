@@ -1,7 +1,7 @@
 apiVersion: v1
 description: High Performance, Kubernetes Native Object Storage
 name: minio
-version: 6.0.3
+version: 6.0.4
 appVersion: master
 keywords:
 - storage
@@ -14,5 +14,3 @@ sources:
 maintainers:
 - name: Minio
   email: dev@minio.io
-- name: Acaleph
-  email: hello@acale.ph
