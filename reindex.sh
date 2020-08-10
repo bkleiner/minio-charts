@@ -1,5 +1,5 @@
 #!/bin/bash
 
-helm package minio
+helm package minio -d releases/
 
-helm repo index --url https://helm.min.io .
+helm repo index --merge index.yaml --url https://helm.min.io .
