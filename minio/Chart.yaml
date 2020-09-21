@@ -1,7 +1,7 @@
 apiVersion: v1
 description: High Performance, Kubernetes Native Object Storage
 name: minio
-version: 6.3.1
+version: 7.0.0
 appVersion: master
 keywords:
 - storage
@@ -12,5 +12,5 @@ icon: https://min.io/resources/img/logo/MINIO_wordmark.png
 sources:
 - https://github.com/minio/minio
 maintainers:
-- name: Minio
+- name: MinIO, Inc
   email: dev@minio.io
