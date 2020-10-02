@@ -29,12 +29,6 @@ spec:
   {{- if .Values.gcsgateway.enabled }}
   replicas: {{ .Values.gcsgateway.replicas }}
   {{- end }}
-  {{- if .Values.ossgateway.enabled }}
-  replicas: {{ .Values.ossgateway.replicas }}
-  {{- end }}
-  {{- if .Values.b2gateway.enabled }}
-  replicas: {{ .Values.b2gateway.replicas }}
-  {{- end }}
   selector:
     matchLabels:
       app: {{ template "minio.name" . }}
@@ -87,23 +81,11 @@ spec:
             - "-ce"
             - "/usr/bin/docker-entrypoint.sh minio -S {{ .Values.certsPath }} gateway gcs {{ .Values.gcsgateway.projectId }} {{- template "minio.extraArgs" . }}"
           {{- else }}
-          {{- if .Values.ossgateway.enabled }}
-          command:
-            - "/bin/sh"
-            - "-ce"
-            - "/usr/bin/docker-entrypoint.sh minio -S {{ .Values.certsPath }} gateway oss {{ .Values.ossgateway.endpointURL }} {{- template "minio.extraArgs" . }}"
-          {{- else }}
           {{- if .Values.nasgateway.enabled }}
           command:
             - "/bin/sh"
             - "-ce"
             - "/usr/bin/docker-entrypoint.sh minio -S {{ .Values.certsPath }} gateway nas {{ $bucketRoot }} {{- template "minio.extraArgs" . }}"
-          {{- else }}
-          {{- if .Values.b2gateway.enabled }}
-          command:
-            - "/bin/sh"
-            - "-ce"
-            - "/usr/bin/docker-entrypoint.sh minio -S {{ .Values.certsPath }} gateway b2 {{- template "minio.extraArgs" . }}"
           {{- else }}
           command:
             - "/bin/sh"
