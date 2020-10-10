@@ -14,7 +14,7 @@ clusterDomain: cluster.local
 ##
 image:
   repository: minio/minio
-  tag: RELEASE.2020-09-26T03-44-56Z
+  tag: RELEASE.2020-10-09T22-55-05Z
   pullPolicy: IfNotPresent
 
 ## Set default image, imageTag, and imagePullPolicy for the `mc` (the minio
@@ -22,7 +22,7 @@ image:
 ##
 mcImage:
   repository: minio/mc
-  tag: RELEASE.2020-09-23T20-02-13Z
+  tag: RELEASE.2020-10-03T02-54-56Z
   pullPolicy: IfNotPresent
 
 ## Set default image, imageTag, and imagePullPolicy for the `jq` (the JSON
