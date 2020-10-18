@@ -4,7 +4,7 @@
 {{ $drivesPerNode := .Values.drivesPerNode | int }}
 {{ $scheme := "http" }}
 {{- if .Values.tls.enabled }}
-{{ $scheme := "https" }}
+{{ $scheme = "https" }}
 {{ end }}
 {{ $mountPath := .Values.mountPath }}
 {{ $bucketRoot := or ($.Values.bucketRoot) ($.Values.mountPath) }}
@@ -26,11 +26,7 @@ spec:
   publishNotReadyAddresses: true
   clusterIP: None
   ports:
-    {{- if .Values.tls.enabled }}
-    - name: https
-    {{ else }}
-    - name: http
-    {{- end }}
+    - name: {{ $scheme }}
       port: {{ .Values.service.port }}
       protocol: TCP
   selector:
@@ -110,11 +106,7 @@ spec:
             {{- end }}
             {{- include "minio.tlsKeysVolumeMount" . | indent 12 }}
           ports:
-            {{- if .Values.tls.enabled }}
-            - name: https
-            {{ else }}
-            - name: http
-            {{- end }}
+            - name: {{ $scheme }}
               containerPort: 9000
           env:
             - name: MINIO_ACCESS_KEY
@@ -134,16 +126,8 @@ spec:
           livenessProbe:
             httpGet:
               path: /minio/health/live
-              {{- if .Values.tls.enabled }}
-              port: https
-              {{ else }}
-              port: http
-              {{- end }}
-              {{- if .Values.tls.enabled }}
-              scheme: HTTPS
-              {{ else }}
-              scheme: HTTP
-              {{- end }}
+              port: {{ $scheme }}
+              scheme: {{ $scheme }}
             initialDelaySeconds: {{ .Values.livenessProbe.initialDelaySeconds }}
             periodSeconds: {{ .Values.livenessProbe.periodSeconds }}
             timeoutSeconds: {{ .Values.livenessProbe.timeoutSeconds }}
