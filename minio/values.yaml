@@ -194,15 +194,6 @@ podAnnotations: {}
 # Additional pod labels
 podLabels: {}
 
-## Liveness and Readiness probe values.
-## ref: https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-probes/
-livenessProbe:
-  initialDelaySeconds: 120
-  periodSeconds: 15
-  timeoutSeconds: 10
-  successThreshold: 1
-  failureThreshold: 3
-
 ## Configure resource requests and limits
 ## ref: http://kubernetes.io/docs/user-guide/compute-resources/
 ##
