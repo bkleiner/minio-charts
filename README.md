@@ -234,7 +234,7 @@ You can specify each parameter using the `--set key=value[,key=value]` argument 
 $ helm install --name my-release --set persistence.size=1Ti minio/minio
 ```
 
-The above command deploys MinIO server with a 100Gi backing persistent volume.
+The above command deploys MinIO server with a 1Ti backing persistent volume.
 
 Alternately, you can provide a YAML file that specifies parameter values while installing the chart. For example,
 
