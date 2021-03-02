@@ -1,6 +1,6 @@
-> NOTE: This helm chart is being deprecated and this project will cease to take new updates from April 2020. For all future requirements you are advised to start using our [MinIO operator](https://github.com/minio/operator).
+# NOTE: This helm chart is being deprecated and this project will cease to take new updates from April 2021. For all future requirements you are advised to start using our [MinIO operator](https://github.com/minio/operator).
 
-MinIO
+# MinIO
 =====
 
 [MinIO](https://min.io) is a High Performance Object Storage released under Apache License v2.0. It is API compatible with Amazon S3 cloud storage service. Use MinIO to build high performance infrastructure for machine learning, analytics and application data workloads.
