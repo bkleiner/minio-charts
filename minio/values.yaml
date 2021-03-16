@@ -121,6 +121,7 @@ trustedCertsSecret: ""
 ##
 persistence:
   enabled: true
+  annotations: {}
 
   ## A manually managed Persistent Volume and Claim
   ## Requires persistence.enabled: true
