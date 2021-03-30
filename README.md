@@ -1,5 +1,4 @@
-# NOTE: This helm chart is being deprecated and this project will cease to take new updates from April 2021. All users are advised to migrate to our [MinIO operator](https://github.com/minio/operator). MinIO operator supports [helm chart](https://github.com/minio/operator/tree/master/helm/minio-operator).
-## To get started
+# NOTE: **A new operator based [Helm Chart](https://github.com/minio/operator/tree/master/helm/minio-operator) replaces this project. This repository will be archived after April 2021**
 
 ```bash
 helm repo remove minio
