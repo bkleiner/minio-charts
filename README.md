@@ -1,10 +1,8 @@
-# NOTE: **A new operator based [Helm Chart](https://github.com/minio/operator/tree/master/helm/minio-operator) replaces this project. This repository will be archived after April 2021**
+# Mirror for legacy minio charts. 
 
 ```bash
 helm repo remove minio
-helm repo add minio https://operator.min.io/
-helm install --namespace minio-operator --create-namespace --generate-name minio/minio-operator
-kubectl apply -f https://github.com/minio/operator/blob/master/examples/tenant.yaml
+helm repo add minio https://bkleiner.github.io/minio-charts/
 ```
 
 # MinIO (legacy docs)
