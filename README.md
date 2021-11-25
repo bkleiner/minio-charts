@@ -5,9 +5,6 @@ helm repo remove minio
 helm repo add minio https://bkleiner.github.io/minio-charts/
 ```
 
-# MinIO (legacy docs)
-=====
-
 [MinIO](https://min.io) is a High Performance Object Storage released under Apache License v2.0. It is API compatible with Amazon S3 cloud storage service. Use MinIO to build high performance infrastructure for machine learning, analytics and application data workloads.
 
 MinIO supports [distributed mode](https://docs.minio.io/docs/distributed-minio-quickstart-guide). In distributed mode, you can pool multiple drives (even on different machines) into a single object storage server.
